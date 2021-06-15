@@ -714,9 +714,8 @@ class Chess {
     } else if ((flags & BITS_QSIDE_CASTLE) != 0) {
       output = 'O-O-O';
     } else {
-      var disambiguator = get_disambiguator(move);
-
       if (move.piece != PAWN) {
+        final disambiguator = get_disambiguator(move);
         output += move.piece.toUpperCase() + disambiguator;
       }
 
